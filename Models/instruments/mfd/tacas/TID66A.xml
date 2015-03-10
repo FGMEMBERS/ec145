@@ -1,0 +1,72 @@
+<PropertyList>
+
+    <path>tcas.ac</path>
+
+    <panel>
+        <name>tcas-pnl</name>
+        <path>tcas1.xml</path>
+        <bottom-left>
+            <x-m>0.0002</x-m>
+            <y-m>-0.027</y-m>
+            <z-m>-0.032</z-m>
+        </bottom-left>
+        <bottom-right>
+            <x-m>0.0002</x-m>
+            <y-m>0.027</y-m>
+            <z-m>-0.032</z-m>
+        </bottom-right>
+        <top-left>
+            <x-m>0.0002</x-m>
+            <y-m>-0.027</y-m>
+            <z-m>0.023</z-m>
+        </top-left>
+    </panel>
+
+    <text>
+        <name>rng</name>
+        <offsets>
+            <x-m>0.0005</x-m>
+            <y-m>0.013</y-m>
+            <z-m>0.026</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type>number-value</type>
+        <property>instrumentation/tcas-display/range</property>
+        <format>RNG %2.0f</format>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.0045</character-size>
+        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+    </text>
+
+    <animation>
+        <name>cyan</name>
+        <type>material</type>
+        <object-name>rng</object-name>
+        <emission>
+            <red>0.0</red>
+            <green>0.7</green>
+            <blue>1.0</blue>
+        </emission>
+        <ambient>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </ambient>
+        <diffuse>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </diffuse>
+        <specular>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </specular>
+    </animation>
+
+</PropertyList>

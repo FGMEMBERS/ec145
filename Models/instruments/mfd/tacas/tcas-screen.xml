@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<name>CAS66</name>
+<background>tcas-2.png</background>
+<w>512</w>
+<h>512</h>
+
+<instruments>
+
+    <instrument>
+        
+        <name>radar</name>
+        <w-base>512</w-base>
+        <h-base>512</h-base>
+        <x>256</x>
+        <y>256</y>
+        <w>512</w>
+        <h>512</h>
+        <layer>
+            <w>512</w>
+            <h>512</h>
+            <texture>
+                <path>tcas-2.png</path>
+                <x1>0.0</x1>
+                <y1>0.0</y1>
+                <x2>1</x2>
+                <y2>1</y2>
+            </texture>
+            <transformations>
+                <transformation>
+                    <type>y-shift</type>
+                    <offset>0</offset>
+                </transformation>
+                <transformation>
+                    <type>x-shift</type>
+                    <offset>0</offset>
+                </transformation>
+            </transformations>
+            <emissive>true</emissive>
+        </layer>
+    </instrument>
+
+</instruments>
+
+</PropertyList>

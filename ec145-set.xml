@@ -1,0 +1,668 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+EC 135 simulation config.
+
+************************************************************************
+-->
+
+<PropertyList>
+	<sim>
+		<description>Eurocopter EC-145</description>
+		<author>Melchior Franz (Nasal  + config)Heiko Schulz, Maik Justus, StuartC (FDM), Melchior Franz (Nasal)</author>
+		<status>0.2</status>
+		<license>GPL v2</license>
+		<aircraft-version>0.1b</aircraft-version>
+
+		<flight-model>yasim</flight-model>
+		<aero>ec145</aero>
+		<fuel-fraction>0.8</fuel-fraction>
+
+	<startup>
+			<splash-texture>Aircraft/ec145/splash.jpg</splash-texture>
+		</startup>
+
+		
+		
+		<flight-recorder include="Systems/flight-recorder.xml"/>
+		
+ <multiplay>
+			<generic>
+				  
+        <!-- Nav lights on -->
+      <int n="0" alias="/controls/lighting/nav-lights-switch" />
+      <!-- Beacon on -->
+      <int n="1" alias="/controls/lighting/beacon-switch" />
+      <!-- Landing lights on -->
+      <int n="2" alias="/controls/lighting/landing-lights-switch" />
+	    <!-- Taxi light on -->
+      <int n="3" alias="/controls/lighting/taxi-light-switch" />
+			
+		
+	
+				
+			</generic>
+		</multiplay>
+
+		<sound>
+			<path>Aircraft/ec145/Sounds/sound.xml</path>
+		</sound>
+
+ <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+      <!--<autopilot>
+        <path>Aircraft/bell407/System/autopilot5.xml</path>
+      </autopilot>-->
+    </systems> 
+
+		<!--<instrumentation>
+			<path>Aircraft/ec135/instrumentation/instrumentation.xml</path>
+		</instrumentation>-->
+
+
+		<model>
+			<path archive="y">Aircraft/ec145/Models/EC-145.xml</path>
+			<bk117>
+			
+				<particles>
+					<enabled type="bool">true</enabled>
+				</particles>
+             </bk117>
+		</model>
+<rendering>
+    <refl_correction type="string">-0.05</refl_correction>
+    </rendering>
+		
+<airport>
+        <runways>
+            <start-offset-m>3.3</start-offset-m>
+        </runways>
+</airport>		
+
+		<!--view-->
+		<view n="0">
+			<name>Cockpit</name>
+			<type>lookfrom</type>
+			<internal type="bool">true</internal>
+			<config>
+                                        <x-offset-m type="double">0.33</x-offset-m><!--left-->
+				<y-offset-m type="double">0.4</y-offset-m><!--up-->
+				<z-offset-m type="double">0.6</z-offset-m><!--back-->
+				<pitch-offset-deg>-14</pitch-offset-deg>
+				<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+			</config>
+		</view>
+		
+		
+				
+		 <view n="101">
+    <name>Pilot cam</name>
+        <internal archive="y">false</internal>
+        <config>
+		 <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+          <x-offset-m type="double">0</x-offset-m><!--left-->
+				<y-offset-m type="double">0.45</y-offset-m><!--up-->
+				<z-offset-m type="double">0</z-offset-m><!--back-->
+          <pitch-offset-deg>-20</pitch-offset-deg>
+		  <heading-offset-deg>199</heading-offset-deg>
+          <default-field-of-view-deg>110</default-field-of-view-deg>
+        </config>
+     
+  </view>
+  
+  
+  	<view n="102">
+			<name>Over the shoulder</name>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<x-offset-m archive="y">0.</x-offset-m><!--right-->
+				<y-offset-m archive="y">0.65</y-offset-m><!--up-->
+				<z-offset-m archive="y">2.2</z-offset-m><!--back-->
+				<pitch-offset-deg>-14</pitch-offset-deg>
+				<heading-offset-deg>0</heading-offset-deg>
+				<default-field-of-view-deg>65</default-field-of-view-deg>
+			</config>
+			
+		 </view>
+  	
+
+		<view n="1">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="2">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="3">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="4">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="5">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+		<view n="6">
+			<config>
+				<target-z-offset-m archive="y" type="double">2.5</target-z-offset-m>
+			</config>
+		</view>
+
+
+		<weight n="0">
+			<name>Pilot</name>
+			<weight-lb>180</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+
+		<weight n="1">
+			<name>Co-Pilot</name>
+			<weight-lb>180</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+
+		<weight n="2">
+			<name>Right Passenger</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+
+		<weight n="3">
+			<name>Middle Passenger</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+
+		<weight n="4">
+			<name>Left Passenger</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>300</max-lb>
+		</weight>
+
+		<weight n="5">
+			<name>Load</name>
+			<weight-lb>0</weight-lb>
+			<max-lb>800</max-lb>
+		</weight>
+
+		<help>
+			
+
+		</help>
+
+		<hitches>
+			<!-- make sure some properties do exist, when the list for multiplayer transfere is defined-->
+			<!-- they need to be in the same value, as they are initilized in the FDM, to get the same values after reset
+    should fix this somehow-->
+			<aerotow>
+				<tow>
+					<length type="float">60</length>
+					<elastic-constant type="float">10000</elastic-constant>
+					<weight-per-m-kg-m type="float">1</weight-per-m-kg-m>
+					<dist type="float">1</dist>
+					<connected-to-property-node type="bool"></connected-to-property-node>
+					<brake-force type="float">100000</brake-force>
+					<connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
+					<end-force-x type ="float">0</end-force-x>
+					<end-force-y type ="float">0</end-force-y>
+					<end-force-z type ="float">0</end-force-z>
+				</tow>
+				<speed-in-tow-direction type="float">0</speed-in-tow-direction>
+				<open type="bool">true</open>
+				<local-pos-x type="float">0</local-pos-x>
+				<local-pos-y type="float">0</local-pos-y>
+				<local-pos-z type="float">0</local-pos-z>
+				<is-slave type="bool">true</is-slave>
+			</aerotow>
+		</hitches>
+
+		<menubar>
+			<default>
+				<menu n="10">
+				<label>EC-145</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.toggle()</script>
+						</binding>
+					</item>
+					<item>
+						<label>Show/hide GSDI</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/sim/model/hide-gsdi</property>
+						</binding>
+					</item>
+					<item>
+						<label>Show/hide Rotor Particles</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							var p = "sim/model/rotor-partcles";
+							setprop(p, var i = !getprop(p));
+							gui.popupTip("Rotor Particles visible " ~ (i ? "Off" : "On"));
+							</script>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+	</sim>
+	
+	
+	
+	<environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+  
+  
+
+	<consumables>
+		<fuel>
+			<tank>
+				<name>Main</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+
+			<tank>
+				<name>Supply</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+		</fuel>
+	</consumables>
+
+	<controls>
+		<rotor>
+			<reltarget type="double">0</reltarget>
+			<maxreltorque type="double">0</maxreltorque>
+		</rotor>
+
+
+		<lighting>
+			<strobe type="bool">false</strobe>
+			<beacon type="bool">false</beacon>
+			<nav-lights type="bool">false</nav-lights>
+		</lighting>
+	</controls>
+
+	<instrumentation>
+		<gsdi>
+			<serviceable type="bool">true</serviceable>
+		</gsdi>
+		<hsi>
+			<serviceable type="bool" archive="y">true</serviceable>
+		</hsi>
+		
+		<efis>
+
+			<ecam>
+					<display-mode type="string">FUEL</display-mode>
+			</ecam>
+			<nd>
+					<display-mode type="string">VOR</display-mode>
+					<display-mode-knob type="int">2</display-mode-knob>
+					<display-range type="int">20</display-range>
+				
+			</nd>
+			<input>
+				<vor-adf-1 type="int">1</vor-adf-1>
+				<vor-adf-2 type="int">1</vor-adf-2>
+				<CSTR type="bool">1</CSTR>
+				<WPT type="bool">1</WPT>
+				<VORD type="bool">1</VORD>
+				<NDB type="bool">1</NDB>
+				<ARPT type="bool">1</ARPT>
+				<WX type="bool">1</WX>
+				<TERR type="bool">1</TERR>
+				<TRAF type="bool">1</TRAF>
+				<taxi type="bool">1</taxi>
+			</input>
+
+		
+		</efis>
+		
+		 <cdu>
+  <display>IDENT</display>
+  <ident>
+   <model>EC 145</model>
+   <engines>-80C2B1F</engines>
+  </ident>
+  <input type="string"/>
+  <serviceable type="bool">true</serviceable>
+ </cdu>
+		
+		
+		  <tcas>
+            <serviceable type="bool">true</serviceable>
+            <inputs>
+                <mode type="int">3</mode>       <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+            </inputs>
+            <!--voice>
+                <file-prefix type="string">Sounds/tcas/</file-prefix>
+            </voice-->
+            <speaker>                           <!-- Speaker Configuration -->
+                <max-dist type="double">2</max-dist>        <!-- Max. distance where speaker is heard -->
+                <reference-dist type="double">1</reference-dist> <!-- Distance to pilot -->
+                <volume type="double"> 1 </volume>          <!-- Volume at reference distance -->
+            </speaker>
+            <range type="int">3</range>
+        </tcas>
+
+        <tcas-display>
+            <radar-texture-path type="string">Aircraft/ec145/Models/instruments/mfd/tacas/tcas-display.png</radar-texture-path>
+            <symbol-texture-path type="string">Aircraft/ec145/Models/instruments/mfd/tacas/symbols.png</symbol-texture-path>
+            <font>
+                <color>
+                    <red type="float">0.7</red>
+                    <green type="float">0.7</green>
+                    <blue type="float">0.7</blue>
+                    <alpha type="float">1</alpha>
+                </color>
+                <name type="string">helvetica_bold.txf</name>
+                <size type="float">14</size>
+                <line-spacing type="float">0.01</line-spacing>
+            </font>
+            <serviceable type="bool">true</serviceable>
+            <range type="int" archive="y">3</range>
+            <aircraft-heading-up type="bool">true</aircraft-heading-up>
+            <heading-up-deg type="float">0.01</heading-up-deg>
+            <x-center type="float">0.5</x-center>
+            <y-center type="float">0.5</y-center>
+            <display>
+            </display>
+            <line-width type="double">3</line-width>
+        </tcas-display>
+
+        <radar>
+            <switch type="string" >off</switch>
+            <switch-pos type="int">0</switch-pos>
+            <mode-control type="int" >1</mode-control>
+            <display-controls>
+                <WX type="bool" >false</WX>
+                <pos type="bool" >true</pos>
+                <data type="bool" >false</data>
+                <centre type="bool" >true</centre>
+        <symbol type="bool" >true</symbol>
+                <tcas type="bool" >true</tcas>
+            </display-controls>
+            <serviceable type="bool">true</serviceable>
+            <range type="int" >10</range>
+            <reference-range-nm type="double" >20</reference-range-nm>
+            <mode type="string" >WX</mode>
+            <font>
+                <tcas>
+                   <color n="0"> <!-- distant targets -->
+                       <red type="float">0</red>
+                       <green type="float">1</green>
+                       <blue type="float">1</blue>
+                   </color>
+                   <color n="1"> <!-- proximity targets -->
+                       <red type="float">0</red>
+                       <green type="float">1</green>
+                       <blue type="float">1</blue>
+                   </color>
+                   <color n="2"> <!-- TA threat targets -->
+                       <red type="float">1</red>
+                       <green type="float">0.5</green>
+                       <blue type="float">0</blue>
+                   </color>
+                   <color n="3"> <!-- RA threat targets -->
+                       <red type="float">1</red>
+                       <green type="float">0</green>
+                       <blue type="float">0</blue>
+                   </color>
+               </tcas>
+            </font>
+            <lightning type="bool" >false</lightning>
+            <display-mode type="string" >map</display-mode>
+            <radar-texture-path type="string">Aircraft/ec145/Models/instruments/mfd/tcas-2.png</radar-texture-path>
+            <echo-texture-path type="string" >Aircraft/ec145/Models/instruments/mfd/wxecho.png</echo-texture-path>
+            <minimized type="bool" >false</minimized>
+            <heading-marker type="bool" >true</heading-marker>
+            <limit-deg type="int">180</limit-deg>
+        </radar>
+
+	</instrumentation>
+
+	<input>
+		<keyboard>
+		
+	<key n="100">
+	<name>d</name>
+	<desc>Set collective to zero</desc>
+		<binding>
+						<command>nasal</command>
+						<script>interpolate("/controls/engines/engine/throttle", 1.0, 1.25)</script>
+		</binding>
+	</key>
+		
+		
+		
+<key n="4">
+    <name>Ctrl-d</name>
+    <desc>Toggle SAS enabled</desc>
+    <binding>
+      <command>nasal</command>
+      <script>bk117.sas.toggleEnable();</script>
+    </binding>
+  </key>
+
+
+
+ <!--<key n="6">
+    <name>Ctrl-f</name>
+    <desc>Toggle AutoHover</desc>
+    <binding>
+      <command>nasal</command>
+      <script>ec135.afcs.toggleAutoHover();</script>
+   </binding>
+    <binding>
+      <command>nasal</command>
+      <script>ec135.cas.toggleEnable();</script>
+    </binding>
+
+  </key>-->
+
+			
+			<key n="82">
+				<name>R</name>
+				<desc>Toggle rotor brake</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var p = "/controls/rotor/brake";
+						setprop(p, !getprop(p));
+					</script>
+				</binding>
+			</key>
+			
+			<key n="105">
+				<name>i</name>
+				<desc>Toggle ignition switch</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						foreach (var e; controls.engines) {
+							if (e.selected.getValue()) {
+								var i = e.controls.getNode("ignition", 1);
+								i.setValue(!i.getValue());
+							}
+						}
+					</script>
+				</binding>
+			</key>
+
+			<key n="114">
+				<name>r</name>
+				<desc>Apply rotor brake</desc>
+				<binding>
+					<command>nasal</command>
+					<script>interpolate("/controls/rotor/brake", 1.0, 2)</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>interpolate("/controls/rotor/brake", 0.0, 2)</script>
+					</binding>
+				</mod-up>
+			</key>
+
+			<key n="118">
+				<name>Alt-v</name>
+				<desc>Toggle dynamic cockpit view</desc>
+				<mod-alt>
+					<binding>
+						<command>property-toggle</command>
+						<property>/sim/view/dynamic/enabled</property>
+					</binding>
+				</mod-alt>
+			</key>
+
+
+			<key n="123">
+				<name>{</name>
+				<desc>Shutdown Engines</desc>
+				<binding>
+					<command>nasal</command>
+					<script>bk117.shutdown()</script>
+					<condition>
+						<property>/sim/signals/fdm-initialized</property>
+					</condition>
+				</binding>
+				<!-- <binding>
+      <command>nasal</command>
+      <script>ec135.cas.toggleEnable();</script>
+    </binding>-->
+			</key>
+
+			<key n="125">
+				<name>}</name>
+				<desc>Start Engines</desc>
+				<binding>
+					<command>nasal</command>
+					<script>bk117.startup()</script>
+					<condition>
+						<property>/sim/signals/fdm-initialized</property>
+					</condition>
+				</binding>
+				<!-- <binding>
+      <command>nasal</command>
+      <script>ec135.cas.toggleEnable();</script>
+    </binding>-->
+			</key>
+
+			<key n="79">
+				<name>O</name>
+				<desc>Open aerotow hook</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/sim/hitches/aerotow/open</property>
+					<value type="bool">true</value>
+				</binding>
+			</key>
+			<key n="111">
+				<name>o</name>
+				<desc>Lock aerotow hook</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/sim/hitches/aerotow/open</property>
+					<value type="bool">false</value>
+				</binding>
+			</key>
+			<key n="15">
+				<name>Ctrl-o</name>
+				<desc>Find aircraft for aerotow</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/aerotow/find-aircraft</property>
+					<value type="bool">true</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>/controls/aerotow/find-aircraft</property>
+						<value type="bool">false</value>
+					</binding>
+				</mod-up>
+			</key>
+			<key n="108">
+				<name>l</name>
+				<desc>Landing Light</desc>
+				 <binding>
+                        <command>nasal</command>
+                        <script>bk117.landinglight.toggle()</script>
+                    </binding>
+			</key>
+
+		</keyboard>
+	</input>
+
+
+	<nasal>
+		<bk117>
+			<file>Aircraft/ec145/Nasal/bk117.nas</file>
+			 <file>Aircraft/ec145/Nasal/liveries.nas</file>
+			<!--<file>Aircraft/ec145/Models/hsi.nas</file>-->
+			<!--<file>Aircraft/ec135/Nasal/fcs.nas</file>-->
+			<file>Aircraft/ec145/Nasal/fcs.nas</file>
+			<file>Aircraft/ec145/Nasal/casdisable.nas</file>
+		</bk117>
+		
+		<lights>
+      <file>Aircraft/ec145/Nasal/Lights.nas</file>
+    </lights>
+	
+			
+	 <cdu>
+  <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
+ </cdu>
+		 <radar><file>Aircraft/Instruments-3d/RDR-160/RDR160.nas</file></radar>
+		 
+	<radar2>
+	<file>Aircraft/Instruments-3d/radar2/radar2.nas</file>
+</radar2>	 
+		 
+	<terrain-map>
+      <file>Aircraft/ec145/Nasal/terrain-map.nas</file>
+    </terrain-map> 
+		 
+	
+	<sound-helper>
+      <file>Aircraft/ec145/Nasal/sound-helper.nas</file>
+    </sound-helper> 
+
+	</nasal>
+
+
+	<rotors>
+		<main>
+			<rpm type="double">0</rpm>
+		</main>
+	</rotors>
+
+</PropertyList>

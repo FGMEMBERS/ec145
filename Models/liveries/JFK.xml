@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+	<model>
+		<livery>
+			<name type="string">Just For Kids </name>
+			<texture>liveries/JFK.png</texture>
+		</livery>
+		
+	</model>
+</sim>
+
+</PropertyList>

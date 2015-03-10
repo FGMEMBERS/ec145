@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+    <name>TCAS</name>
+    <background>Aircraft/Generic/Panels/Textures/transparent-bg.rgb</background>
+    <w>256</w>
+    <h>256</h>
+
+     <instruments>
+
+        <instrument>
+            <name>TCAS1</name>
+            <x>128</x>
+            <y>128</y>
+            <w-base>256</w-base>
+            <h-base>256</h-base>
+
+            <layers>
+                <layer>
+                    <texture>
+                        <path>tcas-display.png</path>
+                        <x1>0.123</x1>
+                        <y1>0.246</y1>
+                        <x2>0.877</x2>
+                        <y2>1.0</y2>
+                    </texture>
+                    <emissive>true</emissive>
+                </layer>
+            </layers>
+        </instrument>
+    </instruments>
+
+</PropertyList>

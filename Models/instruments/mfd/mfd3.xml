@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	
+ 
+ 
+    <path>mfd.ac</path>
+ <model>
+		<path>Aircraft/ec145/Models/instruments/mfd/eadi/eadi.xml</path>
+		<offsets>
+			<x-m>0.0075</x-m>
+			<y-m>-0.0</y-m>
+			<z-m>0.04</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+		
+	</model>
+	
+	<model>
+		<path>Aircraft/ec145/Models/instruments/mfd/map/map.xml</path>
+		<offsets>
+			<x-m>0.008</x-m>
+			<y-m>-0.04</y-m>
+			<z-m>-0.048</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+		
+	</model>
+	
+	
+	<model>
+		<path>Aircraft/ec145/Models/instruments/mfd/tacas/TID66A.xml</path>
+		<offsets>
+			<x-m>0.008</x-m>
+			<y-m>0.03</y-m>
+			<z-m>-0.051</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+		
+		
+	</model>
+
+</PropertyList>
+

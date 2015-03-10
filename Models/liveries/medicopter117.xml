@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+	<model>
+		<livery>
+			<name type="string">Medicopter 117 (Jedes Leben zahlt)</name>
+			<texture>liveries/medicopter117.png</texture>
+		</livery>
+		
+	</model>
+</sim>
+
+</PropertyList>

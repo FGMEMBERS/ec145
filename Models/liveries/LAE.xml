@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+	<model>
+		<livery>
+			<name type="string">Llanbedr Air Executive</name>
+			<texture>liveries/LAE.png</texture>
+		</livery>
+		
+	</model>
+</sim>
+
+</PropertyList>

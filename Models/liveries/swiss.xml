@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+	<model>
+		<livery>
+			<name type="string">REGA - Swiss Air Ambulance</name>
+			<texture>liveries/swiss.png</texture>
+		</livery>
+		
+	</model>
+</sim>
+
+</PropertyList>
