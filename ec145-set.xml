@@ -10,7 +10,7 @@ EC 135 simulation config.
 	<sim>
 		<description>Eurocopter EC-145</description>
 		<author>Melchior Franz (Nasal  + config)Heiko Schulz, Maik Justus, StuartC (FDM), Melchior Franz (Nasal)</author>
-		<status>0.2</status>
+		<status>0.3</status>
 		<license>GPL v2</license>
 		<aircraft-version>0.1b</aircraft-version>
 
